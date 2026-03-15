@@ -2,7 +2,8 @@
 var password = "givemeyourpassword";
 var linkedin = "https://www.linkedin.com/in/anh-khoa-ton-that/";
 var github = "https://github.com/Khoakoha/";
-var email = 'mailto:forrest@fkcodes.com';
+var email = 'mailto:ttakhoa89@gmail.com';
+
 
 whois = [
   "<br>",
@@ -45,16 +46,14 @@ projects = [
 
 help = [
   '<span class="command">clear</span>          Clear terminal',
-  '<span class="command">whois</span>          Who is Forrest?',
-  '<span class="command">whoami</span>         Who are you?',
-  '<span class="command">video</span>          View YouTube videos',
-  '<span class="command">social</span>         Display social networks',
+  '<span class="command">whois</span>          Ask what is this user on terminal?',
+  '<span class="command">whoami</span>         Who am I?',
   '<span class="command">secret</span>         Find the password',
   '<span class="command">projects</span>       View coding projects',
-  '<span class="command">history</span>        View command history',
   '<span class="command">help</span>           You obviously already know what this does',
   '<span class="command">email</span>          Do not email me',
   '<span class="command">banner</span>         Display the header',
+  '<span class="command">history</span>        View command history',
 
 ];
 
@@ -74,13 +73,13 @@ banner = [
   "Using up and down arrow keys to navigate through command history."
 ];
 
-name= [
-  
-" __  __ _   _   ___    ___ ",
-"| |/ /| | | | / _ \\  / _ \\",
-"| ' / | |_| || | | || | | |",
-"| . \\ |  _  || |_| || |_| |",
-"|_|\\_\\|_| |_| \\___/  \\___/"
+myname = [
+'<span class="ascii-name"> __  __ _   _   ___    ___ </span>',
+'<span class="ascii-name">| |/ /| | | | / _ \\  / _ \\</span>',
+'<span class="ascii-name">| \' / | |_| || | | || | | |</span>',
+'<span class="ascii-name">| . \\ |  _  || |_| || |_| |</span>',
+'<span class="ascii-name">|_|\\_\\|_| |_| \\___/  \\___/</span>',
+ "<br>"
 ];
 
 boot = [

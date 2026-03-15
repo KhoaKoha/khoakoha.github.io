@@ -10,16 +10,10 @@ body {
   overflow-x: hidden;
 }
 
-name{
-  margin: 0;
-  padding: 15px 20px;
-  min-height: 99%;
-  width: 100%;
-  min-width: 550px;
-  color: #df728a;
-  background: #211D1B;
-  font-family: cursor, monospace;
-  overflow-x: hidden;
+.ascii-name {
+  color: #00ff9c;
+  font-family: monospace;
+  font-size: 16px;
 }
 ::selection {
   color: #211830;

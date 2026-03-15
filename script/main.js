@@ -9,25 +9,55 @@ var pw = false;
 let pwd = false;
 var commands = [];
 
+
+
 setTimeout(function () {
 
+  // 1. Boot sequence
   loopLines(boot, "color2", 60);
 
+  // 2. Banner
   setTimeout(function () {
     loopLines(banner, "", 80);
   }, boot.length * 60 + 200);
+
+  // 3. Name ASCII
+  setTimeout(function () {
+    loopLines(myname, "", 80);
+  }, boot.length * 60 + banner.length * 80 + 400);
 
   textarea.focus();
 
 }, 100);
 
+
+document.addEventListener("DOMContentLoaded",function(){
+  textarea.focus();
+});
+
+document.addEventListener("click",function(){
+  textarea.focus();
+});
+
+
+/* typing handlers */
+
+textarea.addEventListener("keyup",function(e){
+  typeIt(this,e);
+});
+
+textarea.addEventListener("keydown",function(e){
+  typeIt(this,e);
+  moveIt(this.value.length,e);
+});
+
 window.addEventListener("keyup", enterKey);
 
 console.log(
-  "%cYou hacked my password!˜ ",
-  "color: #04ff00; font-weight: bold; font-size: 24px;"
+  "%cYou hacked my password!^_^ ",
+  "color: #431e99; font-weight: bold; font-size: 24px;"
 );
-console.log("%cPassword: '" + password + "' - I wonder what it does?”", "color: grey");
+console.log("%cPassword: '" + password + "' - I wonder what it does?", "color: grey");
 
 //init
 textarea.value = "";
@@ -95,14 +125,10 @@ function commander(cmd) {
     case "whoami":
       loopLines(whoami, "color2 margin", 80);
       break;
-    case "video":
-      addLine("Opening YouTube...", "color2", 80);
-      newTab(youtube);
-      break;
     case "sudo":
       addLine("Oh no, you're not admin...", "color2", 80);
       setTimeout(function() {
-        window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+        window.open('https://www.youtube.com/watch?v=HlBYdiXdUa8');
       }, 1000); 
       break;
     case "social":
@@ -124,7 +150,7 @@ function commander(cmd) {
       addLine("<br>", "command", 80 * commands.length + 50);
       break;
     case "email":
-      addLine('Opening mailto:<a href="mailto:forrest@fkcodes.com">forrest@fkcodes.com</a>...', "color2", 80);
+      addLine('Opening mailto:<a href="mailto:ttakhoa89@gmail.com">ttakhoa89@gmail.com</a>...', "color2", 80);
       newTab(email);
       break;
     case "clear":
@@ -137,18 +163,6 @@ function commander(cmd) {
       loopLines(banner, "", 80);
       break;
     // socials
-    case "youtube":
-      addLine("Opening YouTube...", "color2", 80);
-      newTab(youtube);
-      break;
-    case "twitter":
-      addLine("Opening X...", "color2", 0);
-      newTab(twitter);
-      break;
-    case "x":
-      addLine("Opening X...", "color2", 0);
-      newTab(twitter);
-      break;
     case "linkedin":
       addLine("Opening LinkedIn...", "color2", 0);
       newTab(linkedin);
